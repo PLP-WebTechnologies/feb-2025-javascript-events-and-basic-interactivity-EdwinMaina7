@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Interactive Playground</h1>
+            <p class="subtitle">Explore event handling, interactive elements, and form validation</p>
+        </header>
+
+        <!-- Event Handling Section -->
+        <section id="section-events" class="section">
+            <h2>📣 Event Handling</h2>
+            <div class="card">
+                <div class="button-container">
+                    <button id="color-button" class="btn primary">Change Page Color</button>
+                    <button id="text-button" class="btn secondary">Change Text</button>
+                    <button id="secret-button" class="btn accent">Double-Click Me!</button>
+                </div>
+                <div id="event-output" class="output-box">
+                    <p>Event output will appear here</p>
+                </div>
+                <div class="hover-area">
+                    <p>Hover over me to see magic!</p>
+                </div>
+                <div class="key-press-area" tabindex="0">
+                    <p>Click here and press any key</p>
+                    <div id="key-output"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section id="section-interactive" class="section">
+            <h2>🎮 Interactive Elements</h2>
+            
+            <!-- Tabs Component -->
+            <div class="card">
+                <h3>Tabs Component</h3>
+                <div class="tabs">
+                    <div class="tab-header">
+                        <div class="tab-item active" data-tab="tab1">Home</div>
+                        <div class="tab-item" data-tab="tab2">About</div>
+                        <div class="tab-item" data-tab="tab3">Contact</div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane active">
+                            <h4>Welcome Home!</h4>
+                            <p>This is the home tab content. Feel free to explore the other tabs.</p>
+                        </div>
+                        <div id="tab2" class="tab-pane">
+                            <h4>About Us</h4>
+                            <p>We're a team passionate about creating interactive web experiences.</p>
+                        </div>
+                        <div id="tab3" class="tab-pane">
+                            <h4>Contact Us</h4>
+                            <p>Reach us at mainaedwin716@gmail.com or through our social media.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-- Accordion Component -->
+            <div class="card">
+                <h3>Accordion</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 1: Getting Started</div>
+                        <div class="accordion-content">
+                            <p>Start by understanding the basics of JavaScript events. Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 2: Event Types</div>
+                        <div class="accordion-content">
+                            <p>Common events include: click, mouseover, keydown, load, and submit. Each event has its own special properties and behaviors.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 3: Advanced Techniques</div>
+                        <div class="accordion-content">
+                            <p>Event delegation, throttling, and debouncing are advanced techniques that help optimize event handling in complex applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section id="section-form" class="section">
+            <h2>📋 Form Validation</h2>
+            <div class="card">
+                <form id="signup-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input type="password" id="password" class="form-control" required>
+                        <div class="error-message" id="password-error"></div>
+                        <div class="password-strength">
+                            <div class="strength-meter">
+                                <div class="strength-bar" id="strength-bar"></div>
+                            </div>
+                            <div id="strength-text">Password strength</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+                        <input type="password" id="confirm-password" class="form-control" required>
+                        <div class="error-message" id="confirm-password-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Interests (select at least one) <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="web">
+                                Web Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="mobile">
+                                Mobile Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="design">
+                                UI/UX Design
+                            </label>
+                        </div>
+                        <div class="error-message" id="interests-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn primary" id="submit-btn">Submit Form</button>
+                        <button type="reset" class="btn secondary">Reset</button>
+                    </div>
+                    
+                    <div id="form-result" class="hide"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>Maina &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
